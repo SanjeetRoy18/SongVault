@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="logo.svg"> <!-- adds the logo to the title -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <title> Spotify - Web Player: Music for everyone</title>
+  </head>
+  <body>
+    <!-- in the svg file, xmlns="http://www.w3.org/2000/svg" , this has to be added as well in order to work -->
+    <!-- <img src="logo.svg" alt="">  -->
+
+    <div class="container flex bg-black">
+      <div class="left">
+        <div class="home bg-gray rounded m-1 p-1">
+          <div style=" display: flex; justify-content: space-between;"><img class="invert" src="logo.svg" alt="Logo" />
+            <img class="cross" src="cross.svg" alt="">
+          </div>
+          
+          <ul>
+            <li><img class="invert" src="home.svg" alt="Home" />Home</li>
+            <li><img class="invert" src="search.svg" alt="Search" />Search</li>
+          </ul>
+        </div>
+        <div class="library bg-gray rounded m-1 p-1">
+          <div class="heading">
+            <h2>
+            Your Library
+            </h2>
+          </div>
+
+          <div >
+            <ul class="songList">              
+            </ul>
+          </div>
+
+          <div class="footer">
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/"
+                ><span>Legal</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/safetyandprivacy/"
+                ><span>Safety & Privacy Center</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/"
+                ><span>Privacy Policy</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                ><span>Cookies</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                ><span>About Ads</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/accessibility/"
+                ><span>Accessibility</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right bg-gray rounded2 m-1">
+        <div class="header rounded">
+          <div class="nav invert">
+            <img class="hamburger invert" src="hamburger.svg" alt="an image">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 17 24"
+              width="24"
+              height="40"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 17 24"
+              width="24"
+              height="40"
+              color="#000000"
+              fill="none"
+            >
+              <path
+                d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+          <div class="buttons">
+            <button class="signupbtn">Sign up</button>
+            <button class="loginbtn">Log in</button>
+          </div>
+        </div>
+        <div class="SpotifyPlaylists">
+          <h1>Spotify Playlists</h1>
+          <div class="cardContainer">
+            <div class="card">
+              <div class="play" id="0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+
+              <img
+                src="covers/1.jpg"
+                alt="this is an image"
+              />
+              <h2>Mortals [NCS Release]</h2>
+              <p>Warriyo</p>
+            </div>
+
+            <div class="card">
+              <div class="play" id="1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+              <img
+                src="covers/2.jpg"
+                alt="this is an image"
+              />
+              <h2>Huma-Huma</h2>
+              <p>Cielo</p>
+            </div>
+
+            <div class="card">
+              <div class="play" id="2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+              <img
+                src="covers/3.jpg"
+                alt="this is an image"
+              />
+              <h2>Invincible [NCS Release]</h2>
+              <p>DEAF KEV</p>
+            </div>
+
+            <div class="card">
+              <div class="play" id="3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+              <img
+                src="covers/4.jpg"
+                alt="this is an image"
+              />
+              <h2>My Heart [NCS Release]</h2>
+              <p>Different Heaven & EH!DE</p>
+            </div>
+
+            <div class="card">
+              <div class="play" id="4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+              <img
+                src="covers/5.jpg"
+                alt="this is an image"
+              />
+              <h2>Tonight .feat Johnning</h2>
+              <p>Janji Heroes</p>
+            </div>
+
+            <div class="card">
+              <div class="play" id="5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+              <img
+                src="covers/6.jpg"
+                alt="this is an image"
+              />
+              <h2>When You're Alone </h2>
+              <p>Dyalla</p>
+            </div>
+
+            <div class="card">
+              <div class="play" id="6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+              <img
+                src="covers/7.jpg"
+                alt="this is an image"
+              />
+              <h2>Glitcher</h2>
+              <p>Dyalla</p>
+            </div>
+
+            <div class="card">
+              <div class="play" id="7">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e0205be603d0ab07ff5b195554e"
+                alt="this is an image"
+              />
+              <h2>Groove</h2>
+              <p>Dyalla</p>
+            </div>
+
+            <div class="card">
+              <div class="play" id="8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+                
+              <img
+                src="covers/9.jpg"
+                alt="this is an image"
+              />
+              <h2>GTA Type Beat</h2>
+              <p>Dyalla</p>
+            </div>
+
+            <div class="card">
+              <div class="play" id="9">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+              <img
+                src="covers/10.jpg"
+                alt="this is an image"
+              />
+              <h2>For Granted</h2>
+              <p>Dyalla</p>
+            </div>
+
+            
+            <div class="card">
+              <div class="play" id="10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+              <img
+                src="covers/11.jpg"
+                alt="this is an image"
+              />
+              <h2>Bhool Bhulaiyaa</h2>
+              <p>Pitbull | Diljit Dosanjh</p>
+            </div>
+            
+            
+            <div class="card">
+              <div class="play" id="11">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="addLib">
+                  <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 8V16M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <svg class="minus" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none">
+                  <path d="M16 12H8" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="3"></circle>
+                  </svg>
+                </span>
+              <img
+                src="covers/12.jpg"
+                alt="this is an image"
+              />
+              <h2>100 Million</h2>
+              <p>DIVINE | Karan Aujla</p>
+            </div>
+
+          </div>
+          <div class="playbar">
+            
+            <audio id="audio" src="Songs_2/1.mp3"></audio>
+
+             <!-- range is used for Slider input -->
+            <input type="range" id="myProgressBar" value="0" min="0" max="100"></input>
+
+            <!-- Optional: Show current time and total duration -->
+            <div style="display: flex; justify-content: space-between;">
+              <div>
+              <span id="currentTime">0:00 </span> 
+              <span style="color: black;">/</span>
+              <span id="totalDuration">0:00</span>
+              </div>
+              <span style="color: black;"><h3 id="songTitle">Warriyo - Mortals [NCS Release]</h3></span>
+            </div>
+
+            <div class="songInfo">
+
+            </div>
+
+            <div class="songButtons">
+              
+              <ul>
+              <li id="volIcon"> <input type="range" id="volumeControl" value="1" min="0" max="1" step="0.01"></input> </li>
+              </ul>
+
+               <button id="prevBtn" aria-label="Previous">
+               <img src="prev.svg" alt="">
+               </button>
+
+              <button id="playButton">
+              <!-- Default is play icon -->
+              <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+                <path d="M6 4L20 12L6 20Z" />
+              </svg>
+
+              <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24" style="display: none;">
+                <rect x="6" y="4" width="4" height="16"/>
+                <rect x="14" y="4" width="4" height="16"/>
+              </svg>
+            </button>
+              <!-- <img id="playButton" src="playbar.svg" alt=""> -->
+              
+               <button id="nextBtn" aria-label="Next">
+               <img src="next.svg" alt="">
+               </button>
+              
+            </div>
+            <div class="songTime">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

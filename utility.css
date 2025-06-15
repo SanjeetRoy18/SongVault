@@ -1,0 +1,60 @@
+.border{
+    border: 2px solid aqua;
+    margin: 3px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justfiy-center{
+    justify-content: center;
+}
+
+.item-center{
+    align-items: center;
+}
+
+.rounded{
+    border-radius: 7px;
+}
+
+.rounded2{
+    border: 0px solid black;
+    border-radius: 7px;
+}
+
+.m-1{
+    margin: 5px;
+}
+
+.p-1{
+    padding: 10px;
+}
+
+/*ChatGPT*/
+/* Custom Scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); /* light translucent thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Optional for horizontal scroll (if any) */
+::-webkit-scrollbar-thumb:horizontal {
+  height: 6px;
+}
+
+

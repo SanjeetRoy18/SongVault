@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+ body{
+    background-color: black;
+    color: white;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.left{
+    width: 25vw;
+}
+
+.right{
+    width: 75vw;
+}
+
+/* .home{
+    padding: 10px;
+} */
+
+.home ul li{
+    display: flex;
+    gap: 15px;
+    width: 15px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: bold;
+}
+
+.bg-black{
+    background-color: black;
+    color: white;
+}
+
+.bg-gray{
+    background-color: rgb(31 31 31);
+}
+
+.invert{
+    filter: invert(1); /*changes color from black to white */
+}
+
+.library{
+    min-height: 80vh;
+    position: relative;
+}
+
+.cross{
+    display: none;
+}
+
+.songList {
+    padding: 20px 32px;
+    overflow-y: scroll;
+    max-height: 60vh;
+}
+
+.hamburger{
+    display: none;
+}
+
+.songList li{
+    list-style-position: inside;
+    list-style-type: "🎵";
+    margin: 8px -5px;
+    padding: 6px;
+    width: 17.5vw;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    white-space: nowrap;      /* Prevent wrapping */
+    text-overflow: ellipsis;  /* Optional: show ... if no scroll */
+    position: relative;
+}
+
+/*This is the animation*/
+.songList li:hover {
+    background-color: white;
+    color: black;
+    animation: scrollText 5.5s linear infinite;
+    text-overflow: clip;
+}
+@keyframes scrollText {
+  0%   { text-indent: 100%; }
+  100% { text-indent: -100%; }
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(45, 45, 45);
+}
+
+/*This , > , does not affect the padding of the text, rather it changes the padding of the outside of the element*/
+.header > *{ 
+    padding: 20px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    font-size: 10px;
+    gap: 25px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.footer a{
+    color: gray;
+    
+}
+
+.SpotifyPlaylists{
+    padding: 25px;
+}
+
+.cardContainer{
+    display: flex;
+    gap: 8px;
+    max-height: 63vh;
+    overflow-y: scroll;
+    flex-wrap: wrap; /*  flex items to wrap onto multiple lines instead of being forced into a single line. */
+}
+
+.card{
+    position: relative;
+    width: 175px;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #353535ad;
+}
+
+.card:hover{
+    background-color: #464545;
+}
+
+.card img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.card p{
+    color: rgb(145, 145, 145);
+}
+
+.play{
+    position: absolute;
+    top: 135px;
+    right: 22px;
+    opacity: 0;   
+    transition: all is ease-out;
+
+    /* Used ChatGPT */
+    background-color: #1fcb5b; /* Spotify green */
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*card is hovered then also play is seen*/
+.card:hover .play,
+.play:hover{
+    opacity: 1;
+}
+
+.addLib{
+    position: absolute;
+    top: 141px;
+    left: 24px;  
+    opacity: 0.5;    
+    transition: all is ease-out;
+}
+.addLib:hover{
+    opacity: 1;
+}
+
+.buttons > *{
+    margin: 0 12px ; /* the first digit is for top & bottom margins and the second digit is for left & right margins*/
+}
+
+.signupbtn{
+    background-color: rgb(45, 45, 45);
+    color: grey;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.signupbtn:hover{
+    color: white;
+    font-size: 0.9rem;
+}
+
+.loginbtn{
+    font-weight: bold;
+    width: 100px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.loginbtn:hover{
+   transform: scale(1.05); /* we shall not use the font-size attribute here, as it would move the whole nav bar*/
+   opacity: 0.9;
+}
+
+.right{
+    position: relative;
+    overflow: hidden;
+}
+
+#myProgressBar{
+    width: 70vw; 
+    cursor: pointer;
+}
+
+#myProgressBar {
+  -webkit-appearance: none;
+  appearance: none;
+    height: 10px;
+  background: #404040;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Chrome, Safari, Edge (Webkit) */
+#myProgressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #00ff5a; /* Spotify green */
+  cursor: pointer;
+  margin-top: -4.5px; /* aligns thumb vertically */
+  border: none;
+}
+
+/* Firefox */
+#myProgressBar::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #1fcb5b;
+  border: none;
+  cursor: pointer;
+}
+
+/* Track color */
+#myProgressBar::-webkit-slider-runnable-track {
+  height: 5px;
+  background: #404040;
+  border-radius: 5px;
+}
+
+#myProgressBar::-moz-range-track {
+  height: 5px;
+  background: #404040;
+  border-radius: 5px;
+}
+
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    background-color: #ffffff;
+    padding: 12px;
+    width: 94%;
+}
+
+#currentTime {
+  color: rgb(0, 0, 0);   /* Make sure it’s not same as background */
+  display: inline;
+}
+#totalDuration {
+  color: rgb(0, 0, 0);   /* Make sure it’s not same as background */
+  display: inline;
+}
+
+.songButtons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.songButtons ul{    
+    position: absolute;
+    bottom: 15%;
+    left: 3%;
+}
+
+.songButtons li.muted::before {
+  content: "🔇";
+}
+
+.songButtons li.low::before {
+  content: "🔉";
+}
+
+.songButtons li.high::before {
+  content: "🔊";
+}
+.songButtons li::before {
+  content: "🔊";
+  font-size: 30px;       /* Increase icon size */
+  margin-right: 20px;    /* Space between icon and text */
+  vertical-align: middle;
+}
+
+#volumeControl{
+    position: absolute;
+    bottom: 22%;
+    left: 65%;
+    cursor: pointer;
+}
+.volume-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and slider */
+}
+
+.volume-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* makes it white if SVG/PNG is black */
+}
+
+/* Volume slider */
+#volumeControl {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 15px;
+  background: #404040;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Thumb for Chrome/Edge/Safari */
+#volumeControl::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background: #1DB954;
+  border-radius: 50%;
+  border: none;
+  margin-top: -4px;
+  cursor: pointer;
+}
+
+/* Thumb for Firefox */
+#volumeControl::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background: #1DB954;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+/* Track styling */
+#volumeControl::-webkit-slider-runnable-track {
+  height: 5px;
+  background: #404040;
+  border-radius: 5px;
+}
+
+#volumeControl::-moz-range-track {
+  height: 5px;
+  background: #404040;
+  border-radius: 5px;
+}
+
+#prevBtn{
+    background-color: white;
+    border: none;
+    outline: none;
+}
+#prevBtn:hover{
+    opacity: 0.75;
+}
+
+#playButton{
+    transform: scale(1.5);
+    background-color: white;
+    border: none;
+    outline: none;
+}
+#playButton:hover{
+    opacity: 0.75;
+}
+
+#nextBtn{
+    background-color: white;
+    border: none;
+    outline: none;
+}
+#nextBtn:hover{
+    opacity: 0.75;
+}
+
+
+/* How media queries work (important reminder):
+1. Media queries cascade from top to bottom
+
+2. If multiple queries match, the last one wins (for the same property)*/
+
+
+
+@media (max-width: 1440px) {
+  .left{
+    background-color: black;
+    border-radius: 10px;
+    width: 350px;
+    position: absolute;
+    z-index: 0;
+    
+  }
+
+    .library{
+        height:88vh;
+    }
+
+  .right{
+    width: 100%;
+    height: 97vh;
+  }
+    .playbar{
+    width: 99%;
+   position:fixed;
+      bottom:0px;
+    left:0px;
+      
+  }
+
+  .cardContainer{
+    max-height: 79vh;
+      
+  }
+  .card{
+    flex: 1 1 180px; /* allows cards to shrink/grow */
+  min-width: 180px;
+  max-width: 350px;
+  }
+    .songList li{
+    width: 98%;
+    }
+ 
+  #myProgressBar{
+    width: 98%; 
+}
+
+  .hamburger{
+    display: inline;
+  }
+}
+@media (max-width : 1300px) and (max-height: 900px) {
+    .cardContainer{
+        max-height: 67vh;
+    }
+    .card{
+    flex: 1 1 200px; /* allows cards to shrink/grow */
+  max-width: 200px;
+  }
+
+}
+@media (max-width : 1200px) and (max-height: 700px) {
+    .cardContainer{
+        max-height: 62vh;
+    }
+    .card{
+    flex: 1 1 200px; /* allows cards to shrink/grow */
+  max-width: 200px;
+  }
+}
+@media (max-width : 850px) and (max-height: 1200px) {
+    .library{
+        height: 86vh;
+    }
+    .cardContainer{
+        max-height: 75vh;
+    }
+}
+@media (max-width : 800px) and (max-height: 1200px) {
+    .library{
+        height: 85vh;
+    }
+    .cardContainer{
+        max-height: 72vh;
+    }
+}
+
+@media (max-width: 700px) {
+    .cardContainer{
+    max-height: 67vh;
+    }
+    
+}
+@media (max-width: 550px){
+    #songTitle{
+        display:none;
+    }
+    #myProgressBar{
+    width: 95%; 
+}
+
+}
+@media (max-width: 500px) {
+    .cardContainer{
+      justify-content: center;
+    }
+    #songTitle{
+        display:none;
+    }
+    #volumeControl{
+        display: none;
+    }
+    
+}
+
+@media (max-width : 400px) {
+    .cardContainer{
+        max-height: 56vh;
+    }
+    #myProgressBar{
+    width: 92%; 
+}
+
+    
+}
+@media (max-width : 500px) and (max-height: 1000px) {
+    .cardContainer{
+        max-height: 70vh;
+    }
+}
+@media (max-width : 500px) and (max-height: 900px) {
+    .cardContainer{
+        max-height: 69vh;
+    }
+    .card{
+    flex: 1 1 350px; /* allows cards to shrink/grow */
+  max-width: 350px;
+  }
+}
+@media (max-width : 400px) and (max-height: 900px) {
+    .cardContainer{
+        max-height: 66vh;
+    }
+    .card{
+    flex: 1 1 350px; /* allows cards to shrink/grow */
+  max-width: 350px;
+  }
+}
+@media (max-width : 400px) and (max-height: 890px) {
+    .cardContainer{
+        max-height: 65vh;
+    }
+    .buttons{
+        width: 40%;
+        display:flex;
+        margin: 0 1px;
+        
+    }
+    .signupbtn{
+        width: 100%;
+    }
+    .loginbtn{
+        width: 100%;
+        padding: 10px;
+        margin: 0px;
+    }
+}
+@media (max-width : 400px) and (max-height: 750px) {
+    .cardContainer{
+        max-height: 56vh;
+    }
+}
+@media (max-width : 400px) and (max-height: 700px) {
+    .cardContainer{
+        max-height: 54vh;
+    }
+}
